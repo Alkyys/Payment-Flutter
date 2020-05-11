@@ -40,21 +40,24 @@ class _CreatCardState extends State<CreatCard> {
 //                    onPressed: () {},
 //                  ),
 //                ),
-                IconButton(
-                  icon: Container(
-                    foregroundDecoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [Color(0xFFFC00FF), Color(0xFF21D4FD)],
-                            begin: Alignment(0, 0),
-                            end: Alignment(0, 1),
-                            transform: GradientRotation(45)),
-                        backgroundBlendMode: BlendMode.screen),
-                    child: Icon(Icons.credit_card),
-                  ),
-                  iconSize: 36,
-                  color: Colors.black,
-                  onPressed: () {},
-                ),
+//                IconButton(
+//                  icon: Container(
+//                    foregroundDecoration: BoxDecoration(
+//                        gradient: LinearGradient(
+//                            colors: [Color(0xFFFC00FF), Color(0xFF21D4FD)],
+//                            begin: Alignment(0, 0),
+//                            end: Alignment(0, 1),
+//                            transform: GradientRotation(45)),
+//                        backgroundBlendMode: BlendMode.screen),
+//                    child: Icon(Icons.credit_card),
+//                  ),
+//                  iconSize: 36,
+//                  color: Colors.black,
+//                  onPressed: () {},
+//                ),
+
+              // marche poooooooooooooooo
+
                 SvgPicture.asset('assets/svg/paypal.svg',
                     semanticsLabel: 'mastercard Logo')
               ],

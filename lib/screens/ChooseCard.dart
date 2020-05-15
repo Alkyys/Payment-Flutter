@@ -239,10 +239,13 @@ class _ChooseCardState extends State<ChooseCard> {
                   children: <Widget>[
                     Text(cards[i].userName,
                         style: TextStyle(color: Colors.white, fontSize: 17)),
-                    SvgPicture.asset(
-                      cards[i].logoService,
-                      color: Colors.white,
-                      semanticsLabel: 'service logo',
+                    Container(
+                      constraints: BoxConstraints(maxWidth: 70, maxHeight: 50),
+                      child: SvgPicture.asset(
+                        cards[i].logoService,
+                        semanticsLabel: 'service logo',
+                        height: 30,
+                      ),
                     )
                   ],
                 )

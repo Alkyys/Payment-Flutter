@@ -25,58 +25,96 @@ class _CreatCardState extends State<CreatCard> {
         child: Column(
           children: <Widget>[
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-//                Container(
-//                  foregroundDecoration: BoxDecoration(
-//                      gradient: LinearGradient(
-//                          colors: [Color(0xFFFC00FF), Color(0xFF21D4FD)],
-//                          stops: [0.1, 0.9],
-//                          transform: GradientRotation(45)),
-//                      backgroundBlendMode: BlendMode.screen),
-//                  child: IconButton(
-//                    icon: Icon(Icons.credit_card),
-//                    iconSize: 36,
-//                    color: Colors.black,
-//                    onPressed: () {},
-//                  ),
-//                ),
-//                IconButton(
-//                  icon: Container(
-//                    foregroundDecoration: BoxDecoration(
-//                        gradient: LinearGradient(
-//                            colors: [Color(0xFFFC00FF), Color(0xFF21D4FD)],
-//                            begin: Alignment(0, 0),
-//                            end: Alignment(0, 1),
-//                            transform: GradientRotation(45)),
-//                        backgroundBlendMode: BlendMode.screen),
-//                    child: Icon(Icons.credit_card),
-//                  ),
-//                  iconSize: 36,
-//                  color: Colors.black,
-//                  onPressed: () {},
-//                ),
-
-              // marche poooooooooooooooo
+                SvgPicture.asset('assets/svg/card.svg',
+                    semanticsLabel: 'mastercard Logo'),
 
                 SvgPicture.asset('assets/svg/paypal.svg',
                     semanticsLabel: 'mastercard Logo')
               ],
             ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Card Number',
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Card Number',
+                ),
               ),
             ),
             Row(
-              children: <Widget>[Text('hgdvhegs'), Text('kjdcjkseb')],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                    child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'EXPIRE DATE',
+                  ),
+                )),
+                Flexible(
+                    child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'CVV',
+                  ),
+                ))
+              ],
             ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'CARDHOLDER NAME',
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'CARDHOLDER NAME',
+                ),
               ),
             ),
+            Container(
+              height: 50.0,
+              child: GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      const Radius.circular(13),
+                    ),
+                    gradient: LinearGradient(
+                      // TODO: change color
+                        colors:[Color(0xFFFF4E50), Color(0xFFFC00FF)],
+                        stops: [0.1, 0.9],
+                        transform: GradientRotation(45)),
+                    boxShadow: [
+                      BoxShadow(
+                        // TODO: change color
+                        color: Color(0xFFFE23B1),
+                        spreadRadius: 1,
+                        blurRadius: 15,
+                        offset: Offset(1, 1), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Center(
+                        child: Text(
+                          "Add",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'Montserrat',
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

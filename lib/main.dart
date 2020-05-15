@@ -1,6 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:payment/screens/ChooseCard.dart';
 import 'package:payment/screens/CreatCard.dart';
+import 'package:payment/screens/Done.dart';
 import 'package:payment/screens/home.dart';
 
 
@@ -11,6 +13,7 @@ void main() => runApp(MaterialApp(
   routes: {
     '/home': (context) => Home(),
     '/choose_card': (context) => ChooseCard(),
-    '/creat_card': (context) => CreatCard()
+    '/creat_card': (context) => CreatCard(),
+    '/done': (context) => Done()
   },
 ));

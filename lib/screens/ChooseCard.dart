@@ -59,6 +59,12 @@ class _ChooseCardState extends State<ChooseCard> {
         }
         break;
 
+      case "Paypal":
+        {
+          return [Color(0xFF002d8b), Color(0xFF009ae0)];
+        }
+        break;
+
       default:
         {
           return [Color(0xFFFF4E50), Color(0xFFFC00FF)];
@@ -117,6 +123,12 @@ class _ChooseCardState extends State<ChooseCard> {
         }
         break;
 
+      case "Paypal":
+        {
+          return Color(0xFF001f6b);
+        }
+        break;
+
       default:
         {
           return Color(0xFFFE23B1);
@@ -172,6 +184,12 @@ class _ChooseCardState extends State<ChooseCard> {
       case "Crédit Agricole":
         {
           return AssetImage('assets/img/Crédit_Agricole.png');
+        }
+        break;
+
+      case "Paypal":
+        {
+          return AssetImage('assets/img/Paypal.png');
         }
         break;
 

@@ -27,6 +27,12 @@ final List<CreditCard> cards = [
       logoService: 'assets/svg/mastercard.svg'
   ),
   CreditCard(
+      bankName: 'Paypal',
+      numberCard: '•••• •••• •••• 2296',
+      userName: 'John Wick',
+      logoService: 'assets/svg/mastercard.svg'
+  ),
+  CreditCard(
       bankName: 'Banque Postale',
       numberCard: '•••• •••• •••• 2296',
       userName: 'John Wick',

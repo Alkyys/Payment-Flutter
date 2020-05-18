@@ -8,7 +8,6 @@ class CreatCard extends StatefulWidget {
 }
 
 class _CreatCardState extends State<CreatCard> {
-
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -31,104 +30,109 @@ class _CreatCardState extends State<CreatCard> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    SvgPicture.asset('assets/svg/card.svg',
-                        semanticsLabel: 'mastercard Logo'),
-                    SvgPicture.asset('assets/svg/paypal.svg',
-                        semanticsLabel: 'mastercard Logo')
-                  ],
-                ),
-                Form(
-                  key: _formKey,
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding:
-                            const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                        child: TextFormField(
-                          keyboardType: TextInputType.number,
-                          inputFormatters: <TextInputFormatter>[
-                            WhitelistingTextInputFormatter.digitsOnly
-                          ],
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Card Number',
-                          ),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Flexible(
-                              child: TextFormField(
-                                keyboardType: TextInputType.number,
-                                inputFormatters: <TextInputFormatter>[
-                                  WhitelistingTextInputFormatter.digitsOnly
-                                ],
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'EXPIRE DATE',
-                                ),
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return 'Please enter some text';
-                                  }
-                                  return null;
-                                },
-                              )),
-                          Flexible(
-                              child: TextFormField(
-                                keyboardType: TextInputType.number,
-                                inputFormatters: <TextInputFormatter>[
-                                  WhitelistingTextInputFormatter.digitsOnly
-                                ],
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'CVV',
-                                ),
-                                validator: (value) {
-                                  if (value.isEmpty) {
-                                    return 'Please enter some text';
-                                  }
-                                  return null;
-                                },
-                              ))
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextFormField(
-                          keyboardType: TextInputType.number,
-                          inputFormatters: <TextInputFormatter>[
-                            WhitelistingTextInputFormatter.digitsOnly
-                          ],
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'CARDHOLDER NAME',
-                          ),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                        ),
-                      ),
-                    ],
+            Container(
+              alignment: Alignment(0.0, 0.0),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        SvgPicture.asset('assets/svg/card.svg',
+                            semanticsLabel: 'mastercard Logo'),
+                        SvgPicture.asset('assets/svg/paypal.svg',
+                            semanticsLabel: 'mastercard Logo')
+                      ],
+                    ),
                   ),
-                ),
-
-              ],
+                  Form(
+                    key: _formKey,
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 20),
+                          child: TextFormField(
+                            keyboardType: TextInputType.number,
+                            inputFormatters: <TextInputFormatter>[
+                              WhitelistingTextInputFormatter.digitsOnly
+                            ],
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Card Number',
+                            ),
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Flexible(
+                                child: TextFormField(
+                              keyboardType: TextInputType.number,
+                              inputFormatters: <TextInputFormatter>[
+                                WhitelistingTextInputFormatter.digitsOnly
+                              ],
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'EXPIRE DATE',
+                              ),
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter some text';
+                                }
+                                return null;
+                              },
+                            )),
+                            Flexible(
+                                child: TextFormField(
+                              keyboardType: TextInputType.number,
+                              inputFormatters: <TextInputFormatter>[
+                                WhitelistingTextInputFormatter.digitsOnly
+                              ],
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'CVV',
+                              ),
+                              validator: (value) {
+                                if (value.isEmpty) {
+                                  return 'Please enter some text';
+                                }
+                                return null;
+                              },
+                            ))
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            keyboardType: TextInputType.number,
+                            inputFormatters: <TextInputFormatter>[
+                              WhitelistingTextInputFormatter.digitsOnly
+                            ],
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'CARDHOLDER NAME',
+                            ),
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(50, 0, 50, 20),
@@ -137,9 +141,8 @@ class _CreatCardState extends State<CreatCard> {
                 child: GestureDetector(
                   onTap: () {
                     if (_formKey.currentState.validate()) {
-                      Scaffold
-                          .of(context)
-                          .showSnackBar(SnackBar(content: Text('Processing Data')));
+                      Scaffold.of(context).showSnackBar(
+                          SnackBar(content: Text('Processing Data')));
                     }
                   },
                   child: Container(
